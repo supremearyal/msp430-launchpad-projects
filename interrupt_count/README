@@ -1,0 +1,15 @@
+Connections are:
+
+P1.0 to D4
+P1.1 to D5
+P1.2 to D6
+P1.3 to D7
+
+P1.4 to E
+P1.5 to RS
+
+RW to GND
+
+Vco to GND
+Vcc to Vled+
+Vled- to 380 ohm resistor to GND

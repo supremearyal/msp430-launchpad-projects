@@ -1,0 +1,68 @@
+
+lcddemo.bin:     file format binary
+
+
+Disassembly of section .data:
+
+00000000 <.data>:
+       0:	55 42 20 01 	mov.b	&0x0120,r5	
+       4:	35 d0 08 5a 	bis	#23048,	r5	;#0x5a08
+       8:	82 45 00 02 	mov	r5,	&0x0200	
+       c:	31 40 00 03 	mov	#768,	r1	;#0x0300
+      10:	3f 40 00 00 	mov	#0,	r15	;#0x0000
+      14:	0f 93       	tst	r15		
+      16:	08 24       	jz	$+18     	;abs 0x28
+      18:	92 42 00 02 	mov	&0x0200,&0x0120	
+      1c:	20 01 
+      1e:	2f 83       	decd	r15		
+      20:	9f 4f 92 e0 	mov	-8046(r15),512(r15);0xe092(r15), 0x0200(r15)
+      24:	00 02 
+      26:	f8 23       	jnz	$-14     	;abs 0x18
+      28:	3f 40 00 00 	mov	#0,	r15	;#0x0000
+      2c:	0f 93       	tst	r15		
+      2e:	07 24       	jz	$+16     	;abs 0x3e
+      30:	92 42 00 02 	mov	&0x0200,&0x0120	
+      34:	20 01 
+      36:	1f 83       	dec	r15		
+      38:	cf 43 00 02 	mov.b	#0,	512(r15);r3 As==00, 0x0200(r15)
+      3c:	f9 23       	jnz	$-12     	;abs 0x30
+      3e:	b2 40 80 5a 	mov	#23168,	&0x0120	;#0x5a80
+      42:	20 01 
+      44:	5f 42 ff 10 	mov.b	&0x10ff,r15	
+      48:	7f 93       	cmp.b	#-1,	r15	;r3 As==11
+      4a:	04 24       	jz	$+10     	;abs 0x54
+      4c:	5f 42 fe 10 	mov.b	&0x10fe,r15	
+      50:	7f 93       	cmp.b	#-1,	r15	;r3 As==11
+      52:	01 20       	jnz	$+4      	;abs 0x56
+      54:	ff 3f       	jmp	$+0      	;abs 0x54
+      56:	c2 43 56 00 	mov.b	#0,	&0x0056	;r3 As==00
+      5a:	d2 42 ff 10 	mov.b	&0x10ff,&0x0057	
+      5e:	57 00 
+      60:	d2 42 fe 10 	mov.b	&0x10fe,&0x0056	
+      64:	56 00 
+      66:	f2 d0 41 00 	bis.b	#65,	&0x0022	;#0x0041
+      6a:	22 00 
+      6c:	f2 e0 41 00 	xor.b	#65,	&0x0021	;#0x0041
+      70:	21 00 
+      72:	3f 40 f4 01 	mov	#500,	r15	;#0x01f4
+      76:	3e 40 4b 01 	mov	#331,	r14	;#0x014b
+      7a:	1e 83       	dec	r14		
+      7c:	fe 23       	jnz	$-2      	;abs 0x7a
+      7e:	00 3c       	jmp	$+2      	;abs 0x80
+      80:	1f 83       	dec	r15		
+      82:	f9 23       	jnz	$-12     	;abs 0x76
+      84:	f3 3f       	jmp	$-24     	;abs 0x6c
+      86:	32 d0 f0 00 	bis	#240,	r2	;#0x00f0
+      8a:	fd 3f       	jmp	$-4      	;abs 0x86
+      8c:	30 40 90 e0 	br	#0xe090	
+      90:	00 13       	reti			
+	...
+    1fde:	00 00       	.word	0x0000;	????	
+    1fe0:	8c e0 8c e0 	xor	r0,	-8052(r12);0xe08c(r12)
+    1fe4:	8c e0 8c e0 	xor	r0,	-8052(r12);0xe08c(r12)
+    1fe8:	8c e0 8c e0 	xor	r0,	-8052(r12);0xe08c(r12)
+    1fec:	8c e0 8c e0 	xor	r0,	-8052(r12);0xe08c(r12)
+    1ff0:	8c e0 8c e0 	xor	r0,	-8052(r12);0xe08c(r12)
+    1ff4:	8c e0 8c e0 	xor	r0,	-8052(r12);0xe08c(r12)
+    1ff8:	8c e0 8c e0 	xor	r0,	-8052(r12);0xe08c(r12)
+    1ffc:	8c e0 00 e0 	xor	r0,	-8192(r12);0xe000(r12)
